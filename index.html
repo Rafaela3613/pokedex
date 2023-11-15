@@ -38,140 +38,27 @@
     <body>
         <section class="content">
             <h1>Pokedex</h1>
-            <span class="loading" id="loading">Carregando Pokemons...</span>
 
-            <ol id="pokemonList" class="pokemons">
-                <!-- ..... Pokemons here ..... -->
+            <ol class="pokemons">
+                <li class="pokemon">
+                    <span class="number">#001</span>
+                    <span class="name">Bulbasaur</span>
+
+                    <div class="detail">
+                        <ol class="types">
+                            <li class="type">grass</li>
+                            <li class="type">poison</li>
+
+                        </ol>
+
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="Bulbasaur ">
+                    </div>
+                    
+                </li>
             </ol>
-
-            <div class="pagination">
-                <button id="loadMoreButton" type="button">Load More</button>
-            </div>
         </section>
 
-        <dialog class="modal__container" id="modalPokemon">
-            <div class="modal__header">
-                <button class="modal__button--close" id="botaoFecharModal">
-                    X
-                </button>
-            </div>
+        <script src="/assets/js/main.js"></script>
+</body>
 
-            <div class="modal__indentificacao">
-                <span class="pokemon__nome" id="nomeDoPokemon">Bulbassaur</span>
-                <span class="pokemon__numero" id="numeroDoPokemon">#001</span>
-                <ol class="types" id="tiposDoPokemon">
-                    <span class="type grass">grass</span>
-                    <span class="type poison">poison</span>
-                </ol>
-            </div>
-
-            <img
-                class="pokemon__stats--imagem"
-                src="./public/favicon64x64.png"
-                alt="imagem aleatoria para testes"
-                id="imagemDoPokemon"
-            />
-
-            <div class="pokemon__stats">
-                <ul class="stats__headers">
-                    <li>
-                        <span class="stats__item--titulo item__ativo"
-                            >About</span
-                        >
-                    </li>
-                    <li>
-                        <span class="stats__item--titulo">Base Stats</span>
-                    </li>
-                    <li>
-                        <span class="stats__item--titulo">Evolution</span>
-                    </li>
-                </ul>
-
-                <ul class="description__lista">
-                    <div class="description__aba item__ativo">
-                        <ol>
-                            <li>
-                                <label>Species</label>
-                                <span id="especieDoPokemon">Seed</span>
-                            </li>
-                            <li>
-                                <label>Height</label>
-                                <span id="alturaDoPokemon">0.70 cm</span>
-                            </li>
-                            <li>
-                                <label>Weight</label>
-                                <span id="pesoDoPokemon">6.9Kg</span>
-                            </li>
-                            <li>
-                                <label>Abilities</label>
-                                <span id="habilidadesDoPokemon">Overgrow, Chlorophyl</span>
-                            </li>
-                        </ol>
-                    </div>
-
-                    <div class="description__aba">
-                        <ol>
-                            <li>
-                                <label>HP</label>
-                                <div id="vidaDoPokemon"><span>45</span><span class="description__range"><div style="width: 45%; background: red;"></div></span></div>
-                            </li>
-                            <li>
-                                <label>Attack</label>
-                                <div id="ataqueDoPokemon"><span>60</span><span class="description__range"><div style="width: 60%; background: lightgreen;"></div></span></div>
-                            </li>
-                            <li>
-                                <label>Defense</label>
-                                <div id="defesaDoPokemon"><span>48</span><span class="description__range"><div style="width: 48%; background: red;"></div></span></div>
-                            </li>
-                            <li>
-                                <label>Sp. Atk</label>
-                                <div id="spatkDoPokemon"><span>65</span><span class="description__range"><div style="width: 65%; background: lightgreen;"></div></span></div>
-                            </li>
-                            <li>
-                                <label>Sp. Def</label>
-                                <div id="spdefDoPokemon"><span>65</span><span class="description__range"><div style="width: 65%; background: lightgreen;"></div></span></div>
-                            </li>
-                            <li>
-                                <label>Speed</label>
-                                <div id="velDoPokemon"><span>45</span><span class="description__range"><div style="width: 45%; background: red;"></div></span></div>
-                            </li>
-                        </ol>
-
-                    </div>
-
-                    <div class="description__aba" id="evoChain">
-                        <h3 class="evo__title">Evolution Chain</h3>
-                        <div class="evo__row">
-                            <div class="evo__cell">
-                                <img
-                                    class="pokemon__evo--imagem"
-                                    src="./public/favicon64x64.png"
-                                    alt="imagem aleatoria para testes"
-                                />
-                                <span>Bulbassaur</span>
-                            </div>
-                            <div class="evo__cell">
-                                <span class="evo__cell--pointer">➡</span>
-                            </div>
-                            <div class="evo__cell">
-                                <img
-                                    class="pokemon__evo--imagem"
-                                    src="./public/favicon64x64.png"
-                                    alt="imagem aleatoria para testes"
-                                />
-                                <span>Ivysaur</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </ul>
-            </div>
-        </dialog>
-
-        <!-- Nosso JS -->
-        <script src="./assets/js/pokemon-model.js"></script>
-        <script src="./assets/js/poke-api.js"></script>
-        <script src="./assets/js/main.js"></script>
-        <script src="./assets/js/modalPokemon.js"></script>
-    </body>
 </html>
